@@ -103,11 +103,18 @@
           Here is what we found!
         </h4>
         <p class="container mt-4 mb-3" style="text-indent: 40px">
-          Our machine learning program got an accuracy rating over 88% when working with our test data. This means that it accurately predicted 88% of the time when the over or under hit predicting around 56% of the time the over will hit. To understand how our machine learning program was making this determination we decided to look at which feature was most important for our program. What we found was that our 5th feature was the most important which was the total score. This makes a ton of sense as the total score is what is the over/under line is based upon. That however doesn't mean that the other features were completely useless, they still had an impact on our program. 
+          According to our machine learning model from our training data indicates that 47.12% of the time the actual total score exceeds the Vegas Line, while the test probability is 49.32%. According to our background analysis the actual probability of the probability of the score of a given game is 48.34%. Additionally when comparing the distribution of actual scores to the average vegas line we found that the data is split almost exactly in half. With 50.03% of scores being over the average Vegas line and 49.94% of scores being less than the average line.
         </p>
         <div class="container mt-4 mb-3" style="padding-left: 460px;">
-          <img src="https://github.com/JosephNeas/INFO_4602/blob/main/Machine%20Learning%20Features.png" alt="Machine Learning Features">
+          <img src="Machine Learning Features.png" alt="Machine Learning Features">
         </div>
+        <p>
+          If Vegas is able to predict the Over/Under lines of the NFL perfectly in order to create 50/50 odds then how do they do it? Or is there more going on than a simple coinflip to whether Over or Under bets hit? There are two answers:
+          <ul>
+            <li>How Vegas shifts their lines throughout the game compared to the way scoring works in the NFL</li>
+            <li>Vegas Lines use Bayes Theorem, given the probability of each unique match up and their respective expected values.</li>
+          </ul>
+        </p>
         <h4 style="padding-left: 375px;">
           Exploring our results - Vegas Line VS Season Averages
         </h4>
@@ -115,7 +122,7 @@
           We wanted to do a deep dive into the data behind our machine learning project in order to give a better idea for people who want to sports bet as well as give a more complete image of what is going behind the scenes with our program. What we first took a look as was the over under line versus the total score on average on an annual basis. Below is the our visualization of this comparison. As seen, the over under line and the total score are closely related throughout the years with occasional spike in the average total score compared to the over under line. However, based on the averages it looks like the total score is consistently more than the Vegas line in the beginning years and becomes more equal in the later seasons.
         </p>
         <div class="container mt-4 mb-3" style="padding-left: 325px;">
-          <img src="https://github.com/JosephNeas/INFO_4602/blob/main/Over_under.png" alt="Over Under">
+          <img src="Over_under.png" alt="Over Under">
         </div>
         <h4 style="padding-left: 375px;">
           Different Perspective with Deviations
