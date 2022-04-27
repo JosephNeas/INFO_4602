@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://64.media.tumblr.com/a9c69d67482e100041b189670480f87b/62e3dc719f709550-0b/s400x600/d4551983070b18a276ee03d9a9a080aac3367f22.jpg">
+    <link rel="icon" href="logo.jpg">
 
     <title>Bettor Bets</title>
     <style>
@@ -24,9 +24,17 @@
     <div class="container-fluid mt-4">
       <nav class="navbar navbar-light fixed-top shadow-sm p-3 mb-6 bg-white rounded">
         <a class="navbar-brand" href="Home Page.HTML">
-          <img src="https://64.media.tumblr.com/a9c69d67482e100041b189670480f87b/62e3dc719f709550-0b/s400x600/d4551983070b18a276ee03d9a9a080aac3367f22.jpg" alt="Better Bets Logo" width="70" height="60">
+          <img src="logo.jpg" alt="Better Bets Logo" width="70" height="60">
           Bettor Bets
         </a>
+        <ul class="nav nav-pills  justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Redesign.html">Machine Learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutMe.html">Visulizations</a>
+          </li>
+        </ul>
     </div>
 
     <header>
@@ -103,36 +111,59 @@
           Here is what we found!
         </h4>
         <p class="container mt-4 mb-3" style="text-indent: 40px">
-          According to our machine learning model from our training data indicates that 47.12% of the time the actual total score exceeds the Vegas Line, while the test probability is 49.32%. According to our background analysis the actual probability of the probability of the score of a given game is 48.34%. Additionally when comparing the distribution of actual scores to the average vegas line we found that the data is split almost exactly in half. With 50.03% of scores being over the average Vegas line and 49.94% of scores being less than the average line.
+          Our machine learning program got an accuracy rating over 88% when working with our test data. This means that it accurately predicted 88% of the time when the over or under hit predicting around 56% of the time the over will hit. To understand how our machine learning program was making this determination we decided to look at which feature was most important for our program. What we found was that our 5th feature was the most important which was the total score. This makes a ton of sense as the total score is what is the over/under line is based upon. That however doesn't mean that the other features were completely useless, they still had an impact on our program. 
         </p>
         <div class="container mt-4 mb-3" style="padding-left: 460px;">
           <img src="Machine Learning Features.png" alt="Machine Learning Features">
         </div>
-        <p>
-          If Vegas is able to predict the Over/Under lines of the NFL perfectly in order to create 50/50 odds then how do they do it? Or is there more going on than a simple coinflip to whether Over or Under bets hit? There are two answers:
-          <ul>
+        <h4 style="padding-left: 450px;">
+          Accuracy of Vegas NFL Over/Under Lines
+        </h4>
+        <p class="container mt-4 mb-3" style="text-indent: 40px">
+          We wanted to do a deep dive into the data behind our machine learning project in order to give a better idea for people who want to sports bet as well as give a more complete image of what is going behind the scenes with our program. What we first took a look as was the over under line versus the total score on average on an annual basis. Below is the our visualization of this comparison. We discovered that our machine learning model, our training indicates that 47.12% of the time the actual total score exceeds the Vegas Line, while the test probability is 49.32%. According to our background analysis, the actual probability of the probability of the score of a given game is 48.34%. Additionally, when comparing the distribution of actual scores to the average vegas line we found that the data is split almost exactly in half. With 50.03% of scores being over the average Vegas line and 49.94% of scores being less than the average line. 
+        </p>
+        <div class="container mt-4 mb-3" style="padding-left: 450px;">
+          <img src="Vegas Vs Score.png" alt="Vegas line versus average score">
+        </div>
+        <p class="container mt-4 mb-3" style="text-indent: 40px"> If Vegas is able to predict the Over/Under lines of the NFL perfectly in order to create 50/50 odds then how do they do it? Or is there more going on than a simple coinflip to whether Over or Under bets hit? There are two answers:
+          <ul style="padding-left: 100px">
             <li>How Vegas shifts their lines throughout the game compared to the way scoring works in the NFL</li>
             <li>Vegas Lines use Bayes Theorem, given the probability of each unique match up and their respective expected values.</li>
           </ul>
         </p>
-        <h4 style="padding-left: 375px;">
-          Exploring our results - Vegas Line VS Season Averages
+        <h4 style="padding-left: 500px;">
+          Math Behind Vegas Line Shifts:
         </h4>
         <p class="container mt-4 mb-3" style="text-indent: 40px">
-          We wanted to do a deep dive into the data behind our machine learning project in order to give a better idea for people who want to sports bet as well as give a more complete image of what is going behind the scenes with our program. What we first took a look as was the over under line versus the total score on average on an annual basis. Below is the our visualization of this comparison. As seen, the over under line and the total score are closely related throughout the years with occasional spike in the average total score compared to the over under line. However, based on the averages it looks like the total score is consistently more than the Vegas line in the beginning years and becomes more equal in the later seasons.
+           The Graph below shows the average Vegas line in red and the average actual score for each year's season in green. This graph demonstrates two things:
+           <ul style="padding-left: 100px">
+            <li>That the average score exceeds the average line in the majority of seasons since 1966.</li>
+            <li>After the 1980 season, the Average line did not exceed 6 (the least amount of points for a touchdown scored) and did not exceed 3 (the number of points for a field goal.</li>
+          </ul>
         </p>
         <div class="container mt-4 mb-3" style="padding-left: 325px;">
-          <img src="Over_under.png" alt="Over Under">
+          <img src="Vegas Line vs Avg Score.png" alt="Line Graph Vegas vs Avg Score">
         </div>
-        <h4 style="padding-left: 375px;">
-          Different Perspective with Deviations
-        </h4>
         <p class="container mt-4 mb-3" style="text-indent: 40px">
-          Deviations
+          With the average score per season exceeding the average line in the majority of seasons stretching back to 1966, then why not bet on them over every time? The answer lies within the standard deviations of both the Vegas lines and actual scores. The standard deviation of the Vegas line is 4 points, while the standard deviation of the actual score is 14.12 points. This indicates that on average the total score of a given game deviates by two touchdowns from the mean, and the line only deviates by a field goal on average. When looking at seasons after 1980 where the difference between average scores and average lines does not exceed 7. It becomes clear why “the house always wins.”   
         </p>
-        <div class="container mt-4 mb-3" style="padding-left: 325px;">
-          <img src="D:\Users\mojoj\OneDrive\School\INFO CAPSTONE\Over_under.png" alt="Over Under">
-        </div>
+        <p class="container mt-4 mb-3" style="text-indent: 40px">
+          If the difference in points never exceeds 7 and the standard deviation of the line is 4. If the line is 40 points, and the score is 30-3. Every time the game deviates by one or two touchdowns: 
+          <ul style="padding-left: 100px">
+            <li>Over Bettor: Those betting the over will lose if the touchdown isn’t scored, or even if the touchdown is scored if the line was increased by 4. Then the over bettor requires a second touchdown in order to exceed the over at 11 more points. Even if the line is decreased by 4, a field goal by either team would also result in a null bet. (No money made or lost or made)</li>
+            <li>Under Bettor: Likewise the under bettor will lose if the line is decreased by 4, and a touchdown (with an extra point is scored) occurs, which is half the standard deviation. If a field goal is made then the bet is null(no money made or lost) Similarly the under bettor also loses if two touchdowns are scored and the line is moved up by 4 to 11 needed points.</li>
+          </ul>
+        </p>
+        <h4 style="padding-left: 350px;">
+          How we could have Improved the Accuracy of our Algorithm
+        </h4>
+        <h6 style="padding-left: 450px;">
+          Determining probability by Matchup Using Bayes Theorem 
+        </h6>
+        <p class="container mt-4 mb-3" style="text-indent: 40px">
+
+           With time permitted we would have included every matchup based on their uniqueness determined by which teams were playing and the home and away teams. Once these matchups are determined like so as seen in our code. We first would predict the probability of the over or under hitting when one team is home and the other team is away and vice versa. Then find the posterior probabilities of each outcome by using the over and under the probability of each team in every matchup, and the over-under probability of the given matchup. Once this is completed we are left with the posterior probabilities for the over/under for each matchup of both permutations of home and away. Ideally, we would add a column for matchup probabilities that corresponds with the correct game and the correct probability (of over or under) with the corresponding 0 or 1 in the “Over Hit Column” 
+        </p>
       </div>
      </div>
     </div>
